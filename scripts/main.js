@@ -1,7 +1,7 @@
 // A snippet of code to replace Mozilla is Cool with Hello World
  
 // Grab the heading in the document
-const myHeading = document.querySelector('h1');
+const myHeading = document.getElementByID('myHeading');
  
 // Replace the heading text with Hello World!
 
