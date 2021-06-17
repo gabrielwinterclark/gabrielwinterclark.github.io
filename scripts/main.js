@@ -5,7 +5,7 @@ var myHeading = document.getElementByID('alpha');
  
 // Replace the heading text with Hello World!
 
-alpha.textContent = 'Hello world!';
+myHeading.textContent = 'Hello world!';
 
 function changeColor(newColor) {
   var elem = document.getElementById('myPara');
