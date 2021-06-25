@@ -12,6 +12,6 @@ quiz.push(new question('What is the capital of Bangladesh','Dhaka'));
 
 let i = 0;
 while (i < quiz.length)  {
-  console.log(quiz[i].question + ' ' + quiz[i].answer);
+  (quiz[i].question);
   ++i
 }
