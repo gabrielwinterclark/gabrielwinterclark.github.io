@@ -1,20 +1,17 @@
-// Grab the form element from HTML
-	var form = document.querySelector("form");
-	// Grab the pre element from HTML
-	var log = document.querySelector("#log");
-	// Wait for the user to click Submit
-	form.addEventListener("submit", function(event) {
-	  // Retrieve the data from the form
-	  var data = new FormData(form);
-	  // Create a string to store the data
-	  var output = "";
-	  // Loop through the data and collect the value of
-	  // the name tag and the value that the user selected
-	  for (const entry of data) {
-	    // print out the name and its current value
-	    output = output + entry[0] + "=" + entry[1] + "\r";
-	  };
-	  // print out the result
-	  log.innerText = output;
-	  event.preventDefault();
-	}, false);
+class country {
+	constructor (question, answer) {
+		this.question = question;
+		this.answer = answer;
+	}
+}
+let countries = [];
+countries.push(new country("What is the capital of Mexico?", "Mexico City"));
+countries.push(new country("What is the capital of Russia?", "Moscow"));
+countries.push(new country("What is the capital of Bangladesh?", "Dhaka"));
+countries.push(new country("What is the capital of Nigeria?", "Abuja"));
+countries.push(new country("What is the capital of Brazil?", "Brasilia"));
+countries.push(new country("What is the capital of Pakistan?", "Islamabad"));
+countries.push(new country("What is the capital of Indonesia?", "Jakarta"));
+countries.push(new country("What is the capital of the United States?", "Washington, D.C."));
+countries.push(new country("What is the capital of India?", "New Delhi"));
+countries.push(new country("What is the capital of China?", "Beijing"));
