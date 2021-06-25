@@ -1,3 +1,4 @@
+let quiz = document.querySelector("quiz")
 class question {
 	constructor (question, answer) {
 		this.question = question;
