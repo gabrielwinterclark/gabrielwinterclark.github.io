@@ -1,6 +1,6 @@
 (function() {
 
-let quiz = document.querySelector('.quiz')
+let quizList = document.querySelector('.quiz')
 class question {
 	constructor (question, answer) {
 		this.question = question;
@@ -23,5 +23,5 @@ quizObjects.push(new question('What is the capital of China?', 'Beijing'));
 for (country of quizObjects) {
 	quizItems += '<li>' + country.name + '</li>'
 }
-quiz.innerHTML = quizItems
+quizList.innerHTML = quizItems
 })();
