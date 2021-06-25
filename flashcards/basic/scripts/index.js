@@ -1,4 +1,6 @@
-let quiz = document.querySelector("quiz")
+(function() {
+
+let quiz = document.querySelector('.quiz')
 class question {
 	constructor (question, answer) {
 		this.question = question;
@@ -6,19 +8,20 @@ class question {
 		this.correct = false;
 	}
 }
-let quiz = [];
-quiz.push(new question('What is the capital of Mexico?', 'Mexico City'));
-quiz.push(new question('What is the capital of Russia?', 'Moscow'));
-quiz.push(new question('What is the capital of Bangladesh?', 'Dhaka'));
-quiz.push(new question('What is the capital of Nigeria?', 'Abuja'));
-quiz.push(new question('What is the capital of Brazil?', 'Brasilia'));
-quiz.push(new question('What is the capital of Pakistan?', 'Islamabad'));
-quiz.push(new question('What is the capital of Indonesia?', 'Jakarta'));
-quiz.push(new question('What is the capital of the United States?', 'Washington, D.C.'));
-quiz.push(new question('What is the capital of India?', 'New Delhi'));
-quiz.push(new question('What is the capital of China?', 'Beijing'));
-let i = 0;
-while (i < quiz.length)  {
-  console.log(quiz[i].question + ' ' + quiz[i].answer);
-  ++i
+let quizObjects = [];
+quizObjects.push(new question('What is the capital of Mexico?', 'Mexico City'));
+quizObjects.push(new question('What is the capital of Russia?', 'Moscow'));
+quizObjects.push(new question('What is the capital of Bangladesh?', 'Dhaka'));
+quizObjects.push(new question('What is the capital of Nigeria?', 'Abuja'));
+quizObjects.push(new question('What is the capital of Brazil?', 'Brasilia'));
+quizObjects.push(new question('What is the capital of Pakistan?', 'Islamabad'));
+quizObjects.push(new question('What is the capital of Indonesia?', 'Jakarta'));
+quizObjects.push(new question('What is the capital of the United States?', 'Washington, D.C.'));
+quizObjects.push(new question('What is the capital of India?', 'New Delhi'));
+quizObjects.push(new question('What is the capital of China?', 'Beijing'));
+	let quizItems = ''
+for (country of quizObjects) {
+	quizItems += '<li>' + country.name + '</li>'
 }
+quiz.innerHTML = quizItems
+})();
