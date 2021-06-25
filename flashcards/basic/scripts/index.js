@@ -1,24 +1,9 @@
-(function() {
-
-let quizList = document.querySelector('.quiz')
-
-let quizObjects = [
-	{
-	"question" = "What is the capital of Mexico?",
-	"answer" = "Mexico City"
-	},
-	{
-	"question" = "What is the capital of Russia?",
-	"answer" = "Moscow"
-	},
-	{
-	"question" = "What is the capital of Bangladesh?",
-	"answer" = "Dhaka"
+class question {
+	constructor (question,answer) {
+		this.question = question;
+		this.answer = answer;
 	}
-];
-	let quizItems = ''
-for (country of quizObjects) {
-	quizItems += '<li>' + country.name + '</li>'
 }
-quizList.innerHTML = quizItems
-})();
+let Mexico = new question("What is the capital of Mexico?","Mexico City");
+let Russia = new question("What is the capital of Russia?","Moscow");
+let Bangladesh = new question("What is the capital of Bangladesh","Dhaka);
