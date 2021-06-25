@@ -4,6 +4,14 @@ class question {
 		this.answer = answer;
 	}
 }
-let Mexico = new question("What is the capital of Mexico?","Mexico City");
-let Russia = new question("What is the capital of Russia?","Moscow");
-let Bangladesh = new question("What is the capital of Bangladesh","Dhaka);
+
+let quiz = [];
+quiz.push(new question('What is the capital of Mexico?','Mexico City'));
+quiz.push(new question('What is the capital of Russia?','Moscow'));
+quiz.push(new question('What is the capital of Bangladesh','Dhaka'));
+
+let i = 0;
+while (i < quiz.length)  {
+  console.log(quiz[i].question + ' ' + quiz[i].answer);
+  ++i
+}
