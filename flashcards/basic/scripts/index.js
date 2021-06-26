@@ -61,5 +61,5 @@ questionTwo.addEventListener("mouseover", myHoverFunction);
 questionThree.addEventListener("mouseover", myHoverFunction);
 
 function myHoverFunction() {
-  alert("Please click the question to view the answer!");
+  console.log("Please click the question to view the answer!");
 }
