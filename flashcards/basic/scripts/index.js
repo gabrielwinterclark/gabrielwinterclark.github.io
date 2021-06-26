@@ -40,7 +40,7 @@ for (let i = 0; i < quiz.length; i++) {
   console.log(quiz[i].question);
 }
 
-//add a listener event for each question to display the answer when the question is clicked, add listener event to next buttons				       
+//add a listener event for each question to display the answer when the question is clicked 				       
 
 questionOne.addEventListener("click", myFunctionOne);
 
@@ -50,30 +50,12 @@ function myFunctionOne() {
   console.log(quiz[0].answer);
 }
 
-nextOne.addEventListener("click", myNextOneFunction);
-
-function myNextOneFunction( ) {
-	nextOne.style.visibility = 'hidden';
-	questionOne.style.visibility = 'hidden';
-	answerOne.style.visibility = 'hidden';
-	questionTwo.style.visibility = 'visible';
-}	
-
 questionTwo.addEventListener("click", myFunctionTwo);
 
 function myFunctionTwo() {
   answerTwo.style.visibility = 'visible'
   nextTwo.style.visibility = 'visible';
   console.log(quiz[1].answer);
-}
-
-nextTwo.addEventListener("click", myNextTwoFunction);
-
-function myNextTwoFunction( ) {
-	nextTwo.style.visibility = 'hidden';
-	questionTwo.style.visibility = 'hidden';
-	answerTwo.style.visibility = 'hidden';
-	questionThree.style.visibility = 'visible';
 }
 	
 questionThree.addEventListener("click", myFunctionThree);
@@ -84,12 +66,22 @@ function myFunctionThree() {
   console.log(quiz[2].answer)
 }
 
-//add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
+//add listener event to next buttons
 
-questionOne.addEventListener("mouseover", myHoverFunction);
-questionTwo.addEventListener("mouseover", myHoverFunction);
-questionThree.addEventListener("mouseover", myHoverFunction);
+nextTwo.addEventListener("click", myNextTwoFunction);
 
-function myHoverFunction() {
-  console.log("Please click the question to view the answer!");
+function myNextTwoFunction( ) {
+	nextTwo.style.visibility = 'hidden';
+	questionTwo.style.visibility = 'hidden';
+	answerTwo.style.visibility = 'hidden';
+	questionThree.style.visibility = 'visible';
 }
+
+nextOne.addEventListener("click", myNextOneFunction);
+
+function myNextOneFunction( ) {
+	nextOne.style.visibility = 'hidden';
+	questionOne.style.visibility = 'hidden';
+	answerOne.style.visibility = 'hidden';
+	questionTwo.style.visibility = 'visible';
+}	
