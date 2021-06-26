@@ -62,7 +62,7 @@ function myFunctionTwo() {
   answerTwo.style.visibility = 'visible'
   nextTwo.style.visibility = 'visible';
   console.log(quiz[1].answer);
-  console.log("Please hover over the question to see the answer.";
+  console.log("Please hover over the question to see the answer.");
 }
 	
 questionThree.addEventListener("mouseover", myFunctionThree);
