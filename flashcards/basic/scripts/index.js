@@ -53,6 +53,7 @@ function myFunctionOne() {
 nextOne.addEventListener("click", myNextOneFunction);
 
 function myNextOneFunction( ) {
+	nextOne.style.visibility = 'hidden';
 	questionOne.style.visibility = 'hidden';
 	answerOne.style.visibility = 'hidden';
 	questionTwo.style.visibility = 'visible';
@@ -69,6 +70,7 @@ function myFunctionTwo() {
 nextTwo.addEventListener("click", myNextTwoFunction);
 
 function myNextTwoFunction( ) {
+	nextTwo.style.visibility = 'hidden';
 	questionTwo.style.visibility = 'hidden';
 	answerTwo.style.visibility = 'hidden';
 	questionThree.style.visibility = 'visible';
