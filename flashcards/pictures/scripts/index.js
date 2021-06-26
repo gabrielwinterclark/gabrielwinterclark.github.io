@@ -24,7 +24,7 @@ var cathedralimage = document.getElementById("cathedralimage");
 var revolucionimage = document.getElementById("revolucionimage");
 var memorialimage = document.getElementById("memorialimage");
 
-//hide the answers and next buttons until later
+//hide everything but the first question until later
 
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
@@ -33,6 +33,12 @@ questionThree.style.visibility = 'hidden';
 answerThree.style.visibility = 'hidden';
 nextOne.style.visibility = 'hidden';
 nextTwo.style.visibility = 'hidden';
+cathedraltext.style.visibility = 'hidden';
+revoluciontext.style.visibility = 'hidden';
+memorialtext.style.visibility = 'hidden';
+cathedralimage.style.visibility = 'hidden';
+revolucionimage.style.visibility = 'hidden';
+memorialimage.style.visibility = 'hidden';
 
 //delcare an array called quiz
 let quiz = [];
