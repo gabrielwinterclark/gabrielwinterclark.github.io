@@ -67,7 +67,6 @@ function myFunctionOne() {
   revolucionimage.style.visibility = 'visible';
   revoluciontext.style.visibility = 'visible';
   console.log(quiz[0].answer);
-  console.log("Please hover over the question to see the answer.");
 }
 
 questionTwo.addEventListener("mouseover", myFunctionTwo);
@@ -78,7 +77,6 @@ function myFunctionTwo() {
   cathedralimage.style.visibility = 'visible';
   cathedraltext.style.visibility = 'visible';
   console.log(quiz[1].answer);
-  console.log("Please hover over the question to see the answer.");
 }
 	
 questionThree.addEventListener("mouseover", myFunctionThree);
@@ -102,6 +100,7 @@ function myNextOneFunction( ) {
 	questionTwo.style.visibility = 'visible';
 	revolucionimage.style.visibility = 'hidden';
 	revoluciontext.style.visibility = 'hidden';
+	console.log("Please hover over the question to see the answer.");
 }	
 
 nextTwo.addEventListener("click", myNextTwoFunction);
@@ -113,4 +112,5 @@ function myNextTwoFunction( ) {
 	questionThree.style.visibility = 'visible';
 	cathedraltext.style.visibility = 'hidden';
 	cathedralimage.style.visibility = 'hidden';
+	console.log("Please hover over the question to see the answer.");
 }
