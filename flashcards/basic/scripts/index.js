@@ -16,6 +16,11 @@ var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 
+//hide the answers until later
+answerOne.style.visibility = 'hidden';
+answerTwo.style.visibility = 'hidden';
+answerThree.style.visibility = 'hidden';
+
 //delcare an array called quiz
 let quiz = [];
 
