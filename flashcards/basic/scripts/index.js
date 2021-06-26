@@ -31,7 +31,7 @@ quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 
 //loop through the array printing out the question and the answer in the console
 for (let i = 0; i < quiz.length; i++) {
-  console.log(quiz[i]);
+  console.log(quiz[i].question);
 }
 
 //add a listener event for each question to display the answer when the question is clicked				       
