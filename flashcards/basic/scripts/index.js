@@ -16,10 +16,10 @@ for (let i = 0; i < quiz.length; i++) {
 }
 var questionOne = document.getElementById("questionOne");
 var questionTwo = document.getElementById("questionTwo");
-var questionThree = document.getElementbyID("questionThree");
-var answerOne = document.getElementbyID("answerOne");
-var answerTwo = document.getElementbyID("answerTwo");
-var answerThree = document.getElementbyID("answerThree");
+var questionThree = document.getElementbyId("questionThree");
+var answerOne = document.getElementbyId("answerOne");
+var answerTwo = document.getElementbyId("answerTwo");
+var answerThree = document.getElementbyId("answerThree");
 				       
 questionOne.addEventListener("click", myFunction);
 
