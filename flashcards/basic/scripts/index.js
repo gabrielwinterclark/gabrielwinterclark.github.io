@@ -25,9 +25,9 @@ answerThree.style.visibility = 'hidden';
 let quiz = [];
 
 //create 3 new objects and push them onto the array
-quiz.push(new question('What is the capital of Mexico?','Mexico City'));
-quiz.push(new question('What is the capital of Russia?','Moscow'));
-quiz.push(new question('What is the capital of Bangladesh','Dhaka'));
+quiz.push(new question(questionOne,answerOne));
+quiz.push(new question(questionTwo,answerTwo));
+quiz.push(new question(questionThree,answerThree));
 
 //loop through the array printing out the question and the answer in the console
 for (let i = 0; i < quiz.length; i++) {
