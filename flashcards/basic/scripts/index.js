@@ -35,6 +35,7 @@ for (let i = 0; i < quiz.length; i++) {
 }
 
 //add a listener event for each question to display the answer when the question is clicked				       
+
 questionOne.addEventListener("click", myFunctionOne);
 
 function myFunctionOne() {
@@ -51,4 +52,14 @@ questionThree.addEventListener("click", myFunctionThree);
 
 function myFunctionThree() {
   answerThree.style.visibility = 'visible';
+}
+
+//add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
+
+questionOne.addEventListener("hover", myHoverFunction);
+questionTwo.addEventListener("hover", myHoverFunction);
+questionThree.addEventListener("hover", myHoverFunction);
+
+function myHoverFunction() {
+  alert("Please click the question to view the answer!");
 }
