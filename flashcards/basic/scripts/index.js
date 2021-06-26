@@ -24,5 +24,5 @@ var answerThree = document.getElementById("answerThree");
 questionOne.addEventListener("click", myFunction);
 
 function myFunction() {
-  alert ("Test");
+  alert (answerOne);
 }
