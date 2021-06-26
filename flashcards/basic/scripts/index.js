@@ -38,17 +38,17 @@ for (let i = 0; i < quiz.length; i++) {
 questionOne.addEventListener("click", myFunctionOne);
 
 function myFunctionOne() {
-  alert (answerOne);
+  answerOne.style.visibility = 'visible';
 }
 
 questionTwo.addEventListener("click", myFunctionTwo);
 
 function myFunctionTwo() {
-  alert (answerTwo);
+  answerTwo.style.visibility = 'visible';
 }
 
 questionThree.addEventListener("click", myFunctionThree);
 
 function myFunctionThree() {
-  alert (answerThree);
+  answerThree.style.visibility = 'visible';
 }
