@@ -67,7 +67,7 @@ function myFunctionOne() {
   revolucionimage.style.visibility = 'visible';
   revoluciontext.style.visibility = 'visible';
   console.log(quiz[0].answer);
-  console.log("Please hover over the question to see the answer.";
+  console.log("Please hover over the question to see the answer.");
 }
 
 questionTwo.addEventListener("mouseover", myFunctionTwo);
@@ -78,7 +78,7 @@ function myFunctionTwo() {
   cathedralimage.style.visibility = 'visible';
   cathedraltext.style.visibility = 'visible';
   console.log(quiz[1].answer);
-  console.log("Please hover over the question to see the answer.";
+  console.log("Please hover over the question to see the answer.");
 }
 	
 questionThree.addEventListener("mouseover", myFunctionThree);
