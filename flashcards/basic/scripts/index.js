@@ -16,13 +16,13 @@ for (let i = 0; i < quiz.length; i++) {
 }
 var questionOne = document.getElementById("questionOne");
 var questionTwo = document.getElementById("questionTwo");
-var questionThree = document.getElementbyId("questionThree");
-var answerOne = document.getElementbyId("answerOne");
-var answerTwo = document.getElementbyId("answerTwo");
-var answerThree = document.getElementbyId("answerThree");
+var questionThree = document.getElementById("questionThree");
+var answerOne = document.getElementById("answerOne");
+var answerTwo = document.getElementById("answerTwo");
+var answerThree = document.getElementById("answerThree");
 				       
 questionOne.addEventListener("click", myFunction);
 
 function myFunction() {
   alert ("Test");
-} 
+}
