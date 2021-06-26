@@ -50,6 +50,24 @@ function myFunctionOne() {
   console.log(quiz[0].answer);
 }
 
+questionTwo.addEventListener("click", myFunctionTwo);
+
+function myFunctionTwo() {
+  answerTwo.style.visibility = 'visible'
+  nextTwo.style.visibility = 'visible';
+  console.log(quiz[1].answer);
+}
+	
+questionThree.addEventListener("click", myFunctionThree);
+
+function myFunctionThree() {
+  answerThree.style.visibility = 'visible';
+  nextTwo.style.visibility = 'hidden';
+  console.log(quiz[2].answer)
+}
+
+//add listener event for next buttons
+
 nextOne.addEventListener("click", myNextOneFunction);
 
 function myNextOneFunction( ) {
@@ -59,14 +77,6 @@ function myNextOneFunction( ) {
 	questionTwo.style.visibility = 'visible';
 }	
 
-questionTwo.addEventListener("click", myFunctionTwo);
-
-function myFunctionTwo() {
-  answerTwo.style.visibility = 'visible'
-  nextTwo.style.visibility = 'visible';
-  console.log(quiz[1].answer);
-}
-
 nextTwo.addEventListener("click", myNextTwoFunction);
 
 function myNextTwoFunction( ) {
@@ -74,14 +84,6 @@ function myNextTwoFunction( ) {
 	questionTwo.style.visibility = 'hidden';
 	answerTwo.style.visibility = 'hidden';
 	questionThree.style.visibility = 'visible';
-}
-	
-questionThree.addEventListener("click", myFunctionThree);
-
-function myFunctionThree() {
-  answerThree.style.visibility = 'visible';
-  nextTwo.style.visibility = 'hidden';
-  console.log(quiz[2].answer)
 }
 
 //add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
