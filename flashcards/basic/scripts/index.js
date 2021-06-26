@@ -30,20 +30,20 @@ for (let i = 0; i < quiz.length; i++) {
 }
 
 //add a listener event for each question to display the answer when the question is clicked				       
-questionOne.addEventListener("click", myFunction);
+questionOne.addEventListener("click", myFunctionOne);
 
-function myFunction() {
+function myFunctionOne() {
   alert (answerOne);
 }
 
-questionTwo.addEventListener("click", myFunction);
+questionTwo.addEventListener("click", myFunctionTwo);
 
-function myFunction() {
+function myFunctionTwo() {
   alert (answerTwo);
 }
 
-questionThree.addEventListener("click", myFunction);
+questionThree.addEventListener("click", myFunctionThree);
 
-function myFunction() {
+function myFunctionThree() {
   alert (answerThree);
 }
