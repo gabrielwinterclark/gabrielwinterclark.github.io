@@ -7,7 +7,7 @@ class question {
 	}
 }
 
-//grab questions, answers, and next buttons from HTML and assign variable names
+//grab questions, answers, next buttons, images, and image questions from HTML and assign variable names
 
 var questionOne = document.getElementById("questionOne");
 var questionTwo = document.getElementById("questionTwo");
@@ -17,6 +17,9 @@ var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 var nextOne = document.getElementById("nextOne");
 var nextTwo = document.getElementById("nextTwo");
+var cathedraltext = document.getElementById("cathedraltext");
+var revoluciontext = document.getElementById("revoluciontext");
+var memorialtext = document.getElementById("memorialtext");
 
 //hide the answers and next buttons until later
 
