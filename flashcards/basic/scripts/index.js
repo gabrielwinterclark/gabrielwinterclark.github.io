@@ -7,7 +7,7 @@ class question {
 	}
 }
 
-//grab questions and answers from HTML and assign variable names
+//grab questions, answers, and next buttons from HTML and assign variable names
 
 var questionOne = document.getElementById("questionOne");
 var questionTwo = document.getElementById("questionTwo");
@@ -15,13 +15,17 @@ var questionThree = document.getElementById("questionThree");
 var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
+var nextOne = document.getElementById("nextOne");
+var nextTwo = document.getElementById("nextTwo");
 
-//hide the answers until later
+//hide the answers and next buttons until later
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
 answerTwo.style.visibility = 'hidden';
 questionThree.style.visibility = 'hidden';
 answerThree.style.visibility = 'hidden';
+nextOne.style.visibility = 'hidden';
+nextTwo.style.visibility = 'hidden';
 
 //delcare an array called quiz
 let quiz = [];
@@ -36,32 +40,46 @@ for (let i = 0; i < quiz.length; i++) {
   console.log(quiz[i].question);
 }
 
-//add a listener event for each question to display the answer when the question is clicked				       
+//add a listener event for each question to display the answer when the question is clicked, add listener event to next buttons				       
 
 questionOne.addEventListener("click", myFunctionOne);
 
 function myFunctionOne() {
   answerOne.style.visibility = 'visible';
-  questionTwo.style.visibility = 'visible';	
+  nextOne.style.visibility = 'visible';	
   console.log(quiz[0].answer);
 }
+
+nextOne.addEventListener("click", myNextOneFunction);
+
+function myNextOneFunction( ) {
+	questionOne.style.visibility = 'hidden';
+	answerOne.style.visibility = 'hidden';
+	questionTwo.style.visibility = 'visible';
+}	
 
 questionTwo.addEventListener("click", myFunctionTwo);
 
 function myFunctionTwo() {
-  questionOne.style.visibility = 'hidden';
-  answerOne.style.visibility = 'hidden';
-  answerTwo.style.visibility = 'visible';
+  answerTwo.style.visibility = 'visible'
+  nextTwo.style.visibility = 'visible';
   console.log(quiz[1].answer);
 }
 
+nextTwo.addEventListener("click", myNextTwoFunction);
+
+function myNextTwoFunction( ) {
+	questionTwo.style.visibility = 'hidden';
+	answerTwo.style.visibility = 'hidden';
+	questionThree.style.visibility = 'visible';
+}
+	
 questionThree.addEventListener("click", myFunctionThree);
 
 function myFunctionThree() {
-  questionTwo.style.visibility = 'hidden';
-  answerTwo.style.visibility = 'hidden';
   answerThree.style.visibility = 'visible';
-  console.log(quiz[2].answer);
+  nextTwo.style.visibility = 'hidden';
+  console.log(quiz[2].answer)
 }
 
 //add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
