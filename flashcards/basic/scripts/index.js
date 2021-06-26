@@ -18,7 +18,7 @@ var answerThree = document.getElementById("answerThree");
 var nextOne = document.getElementById("nextOne");
 var nextTwo = document.getElementById("nextTwo");
 
-//hide the answers and next buttons until later
+//hide everything but the first question until later
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
 answerTwo.style.visibility = 'hidden';
@@ -40,7 +40,7 @@ for (let i = 0; i < quiz.length; i++) {
   console.log(quiz[i].question);
 }
 
-//add a listener event for each question to display the answer when the question is clicked 				       
+//add a listener event for each question to display the answer when the question is clicked and display the next button 				       
 
 questionOne.addEventListener("click", myFunctionOne);
 
