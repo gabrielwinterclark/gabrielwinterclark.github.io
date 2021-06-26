@@ -100,6 +100,8 @@ function myNextOneFunction( ) {
 	questionOne.style.visibility = 'hidden';
 	answerOne.style.visibility = 'hidden';
 	questionTwo.style.visibility = 'visible';
+	revolucionimage.style.visibility = 'hidden';
+	revoluciontext.style.visibility = 'hidden';
 }	
 
 nextTwo.addEventListener("click", myNextTwoFunction);
@@ -109,4 +111,6 @@ function myNextTwoFunction( ) {
 	questionTwo.style.visibility = 'hidden';
 	answerTwo.style.visibility = 'hidden';
 	questionThree.style.visibility = 'visible';
+	cathedraltext.style.visibility = 'hidden';
+	cathedralimage.style.visibility = 'hidden';
 }
