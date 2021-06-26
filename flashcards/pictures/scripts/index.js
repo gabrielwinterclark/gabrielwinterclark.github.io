@@ -63,8 +63,10 @@ questionOne.addEventListener("mouseover", myFunctionOne);
 
 function myFunctionOne() {
   answerOne.style.visibility = 'visible';
-  nextOne.style.visibility = 'visible';	
-  console.log(quiz[0].answer)
+  nextOne.style.visibility = 'visible';
+  revolucionimage.style.visibility = 'visible';
+  revoluciontext.style.visibility = 'visible';
+  console.log(quiz[0].answer);
   console.log("Please hover over the question to see the answer.";
 }
 
@@ -73,6 +75,8 @@ questionTwo.addEventListener("mouseover", myFunctionTwo);
 function myFunctionTwo() {
   answerTwo.style.visibility = 'visible'
   nextTwo.style.visibility = 'visible';
+  cathedralimage.style.visibility = 'visible';
+  cathedraltext.style.visibility = 'visible';
   console.log(quiz[1].answer);
   console.log("Please hover over the question to see the answer.";
 }
@@ -82,7 +86,9 @@ questionThree.addEventListener("mouseover", myFunctionThree);
 function myFunctionThree() {
   answerThree.style.visibility = 'visible';
   nextTwo.style.visibility = 'hidden';
-  console.log(quiz[2].answer)
+  memorialimage.style.visibility = 'visible';
+  memorialtext.style.visibility = 'visible';
+  console.log(quiz[2].answer);
 }
 
 //add listener event for next buttons
