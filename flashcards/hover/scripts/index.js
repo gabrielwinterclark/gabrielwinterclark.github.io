@@ -53,7 +53,6 @@ function myFunctionOne() {
   answerOne.style.visibility = 'visible';
   nextOne.style.visibility = 'visible';	
   console.log(quiz[0].answer)
-  console.log("Please hover over the question to see the answer.");
 }
 
 questionTwo.addEventListener("mouseover", myFunctionTwo);
@@ -62,7 +61,6 @@ function myFunctionTwo() {
   answerTwo.style.visibility = 'visible'
   nextTwo.style.visibility = 'visible';
   console.log(quiz[1].answer);
-  console.log("Please hover over the question to see the answer.");
 }
 	
 questionThree.addEventListener("mouseover", myFunctionThree);
@@ -82,6 +80,7 @@ function myNextOneFunction( ) {
 	questionOne.style.visibility = 'hidden';
 	answerOne.style.visibility = 'hidden';
 	questionTwo.style.visibility = 'visible';
+	console.log("Please hover over the question to see the answer.");
 }	
 
 nextTwo.addEventListener("click", myNextTwoFunction);
@@ -91,4 +90,5 @@ function myNextTwoFunction( ) {
 	questionTwo.style.visibility = 'hidden';
 	answerTwo.style.visibility = 'hidden';
 	questionThree.style.visibility = 'visible';
+	console.log("Please hover over the question to see the answer.");
 }
