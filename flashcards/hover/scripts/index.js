@@ -18,7 +18,7 @@ var answerThree = document.getElementById("answerThree");
 var nextOne = document.getElementById("nextOne");
 var nextTwo = document.getElementById("nextTwo");
 
-//hide the answers and next buttons until later
+//hide everything but the first question until later
 
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
