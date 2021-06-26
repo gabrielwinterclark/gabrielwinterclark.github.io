@@ -19,6 +19,7 @@ var nextOne = document.getElementById("nextOne");
 var nextTwo = document.getElementById("nextTwo");
 
 //hide the answers and next buttons until later
+
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
 answerTwo.style.visibility = 'hidden';
@@ -46,7 +47,7 @@ console.log("Please hover over the question to see the answer.")
 
 //add a listener event for each question to display the answer when the question is clicked, make next buttons visible, and explain again to the user that they must hover to see answers				       
 
-questionOne.addEventListener("click", myFunctionOne);
+questionOne.addEventListener("mouseover", myFunctionOne);
 
 function myFunctionOne() {
   answerOne.style.visibility = 'visible';
@@ -55,7 +56,7 @@ function myFunctionOne() {
   console.log("Please hover over the question to see the answer.";
 }
 
-questionTwo.addEventListener("click", myFunctionTwo);
+questionTwo.addEventListener("mouseover", myFunctionTwo);
 
 function myFunctionTwo() {
   answerTwo.style.visibility = 'visible'
@@ -64,7 +65,7 @@ function myFunctionTwo() {
   console.log("Please hover over the question to see the answer.";
 }
 	
-questionThree.addEventListener("click", myFunctionThree);
+questionThree.addEventListener("mouseover", myFunctionThree);
 
 function myFunctionThree() {
   answerThree.style.visibility = 'visible';
@@ -90,14 +91,4 @@ function myNextTwoFunction( ) {
 	questionTwo.style.visibility = 'hidden';
 	answerTwo.style.visibility = 'hidden';
 	questionThree.style.visibility = 'visible';
-}
-
-//add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
-
-questionOne.addEventListener("mouseover", myHoverFunction);
-questionTwo.addEventListener("mouseover", myHoverFunction);
-questionThree.addEventListener("mouseover", myHoverFunction);
-
-function myHoverFunction() {
-  console.log("Please click the question to view the answer!");
 }
