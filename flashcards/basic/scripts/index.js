@@ -18,7 +18,9 @@ var answerThree = document.getElementById("answerThree");
 
 //hide the answers until later
 answerOne.style.visibility = 'hidden';
+questionTwo.style.visibility = 'hidden';
 answerTwo.style.visibility = 'hidden';
+questionThree.style.visibility = 'hidden';
 answerThree.style.visibility = 'hidden';
 
 //delcare an array called quiz
@@ -40,12 +42,15 @@ questionOne.addEventListener("click", myFunctionOne);
 
 function myFunctionOne() {
   answerOne.style.visibility = 'visible';
+  questionTwo.style.visibility = 'visible';	
   console.log(quiz[0].answer);
 }
 
 questionTwo.addEventListener("click", myFunctionTwo);
 
 function myFunctionTwo() {
+  questionOne.style.visibility = 'hidden';
+  answerOne.style.visibility = 'hidden';
   answerTwo.style.visibility = 'visible';
   console.log(quiz[1].answer);
 }
@@ -53,6 +58,8 @@ function myFunctionTwo() {
 questionThree.addEventListener("click", myFunctionThree);
 
 function myFunctionThree() {
+  questionTwo.style.visibility = 'hidden';
+  answerTwo.style.visibility = 'hidden';
   answerThree.style.visibility = 'visible';
   console.log(quiz[2].answer);
 }
