@@ -20,6 +20,9 @@ var nextTwo = document.getElementById("nextTwo");
 var cathedraltext = document.getElementById("cathedraltext");
 var revoluciontext = document.getElementById("revoluciontext");
 var memorialtext = document.getElementById("memorialtext");
+var cathedralimage = document.getElementById("cathedralimage");
+var revolucionimage = document.getElementById("revolucionimage");
+var memorialimage = document.getElementById("memorialimage");
 
 //hide the answers and next buttons until later
 
