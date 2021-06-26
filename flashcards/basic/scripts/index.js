@@ -56,9 +56,9 @@ function myFunctionThree() {
 
 //add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
 
-questionOne.addEventListener("hover", myHoverFunction);
-questionTwo.addEventListener("hover", myHoverFunction);
-questionThree.addEventListener("hover", myHoverFunction);
+questionOne.addEventListener("mouseover", myHoverFunction);
+questionTwo.addEventListener("mouseover", myHoverFunction);
+questionThree.addEventListener("mouseover", myHoverFunction);
 
 function myHoverFunction() {
   alert("Please click the question to view the answer!");
