@@ -40,21 +40,21 @@ questionOne.addEventListener("click", myFunctionOne);
 
 function myFunctionOne() {
   answerOne.style.visibility = 'visible';
-  console.log(quiz.question[0]);
+  console.log(quiz[0].question);
 }
 
 questionTwo.addEventListener("click", myFunctionTwo);
 
 function myFunctionTwo() {
   answerTwo.style.visibility = 'visible';
-  console.log(quiz.question[1]);
+  console.log(quiz[1].question);
 }
 
 questionThree.addEventListener("click", myFunctionThree);
 
 function myFunctionThree() {
   answerThree.style.visibility = 'visible';
-  console.log(quiz.question[2]);
+  console.log(quiz[2].question);
 }
 
 //add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
