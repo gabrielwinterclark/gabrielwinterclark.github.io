@@ -7,7 +7,7 @@ class question {
 	}
 }
 
-//grab questions, answers, and next buttons from HTML and assign variable names
+//grab questions, answers, and next buttons from HTML and assign variable names to work with
 
 var questionOne = document.getElementById("questionOne");
 var questionTwo = document.getElementById("questionTwo");
@@ -18,7 +18,7 @@ var answerThree = document.getElementById("answerThree");
 var nextOne = document.getElementById("nextOne");
 var nextTwo = document.getElementById("nextTwo");
 
-//hide everything but the first question until later
+//hide everything but the first question until later so that user only sees one question at a time 
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
 answerTwo.style.visibility = 'hidden';
@@ -27,7 +27,7 @@ answerThree.style.visibility = 'hidden';
 nextOne.style.visibility = 'hidden';
 nextTwo.style.visibility = 'hidden';
 
-//delcare an array called quiz
+//delcare an array called quiz to store questions and answers
 let quiz = [];
 
 //create 3 new objects and push them onto the array
@@ -66,7 +66,7 @@ function myFunctionThree() {
   console.log(quiz[2].answer)
 }
 
-//add listener event for next buttons
+//add listener event for next buttons so that user can proceed to the next question when they click next
 
 nextOne.addEventListener("click", myNextOneFunction);
 
