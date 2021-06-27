@@ -7,7 +7,7 @@ class question {
 	}
 }
 
-//grab questions, answers, next buttons, images, and image questions from HTML and assign variable names
+//grab questions, answers, next buttons, images, and image questions from HTML and assign variable names to work with
 
 var questionOne = document.getElementById("questionOne");
 var questionTwo = document.getElementById("questionTwo");
@@ -24,7 +24,7 @@ var cathedralimage = document.getElementById("cathedralimage");
 var revolucionimage = document.getElementById("revolucionimage");
 var memorialimage = document.getElementById("memorialimage");
 
-//hide everything but the first question until later
+//hide everything but the first question until later so that we only see one question at a time
 
 answerOne.style.visibility = 'hidden';
 questionTwo.style.visibility = 'hidden';
@@ -40,7 +40,7 @@ cathedralimage.style.visibility = 'hidden';
 revolucionimage.style.visibility = 'hidden';
 memorialimage.style.visibility = 'hidden';
 
-//delcare an array called quiz
+//declare an array called quiz to store questions and answers for printing to console
 let quiz = [];
 
 //create 3 new objects and push them onto the array
@@ -89,7 +89,7 @@ function myFunctionThree() {
   console.log(quiz[2].answer);
 }
 
-//add listener event for next buttons
+//add listener event for next buttons so that user can proceed to next question when they click next
 
 nextOne.addEventListener("click", myNextOneFunction);
 
