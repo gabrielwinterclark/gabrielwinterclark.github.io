@@ -78,7 +78,7 @@ function showHeroes(jsonObj) {
     //loop through the array grabbing each individual power and adding it to a bulleted list
     for (let j = 0; j < superPowers.length; j++ {
       const listItem = document.createElement('li');
-         listItem.textContent = superpowers[j];
+         listItem.textContent = superPowers[j];
          myList.appendChild(listItem);
   }
   //add the HTML objects in the order that they will appear in HTML article
