@@ -31,7 +31,7 @@ request.onload = function() {
 
 function populateHeader(jsonObj) {
   //create a <h1> HTML element
-  const myH1 = document.createElemtn('h1');
+  const myH1 = document.createElement('h1');
   //set the text value to Super Hero Squad by grabbing the JSON object value that corresponds to squadName
   myH1.textContent = jsonObj['squadName'];
   
