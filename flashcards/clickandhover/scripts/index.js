@@ -31,7 +31,7 @@ function showQuestion(i) {
 
 //make a function that will show the answer of each question after the user clicks
 function showAnswer(i) {
-  console.log(quiz[i].answer);
+  document.getElementById("moveOn").style.visibility = hidden;
 
 //add one to questionNumber so that we can move through the questions
   ++questionNumber;
