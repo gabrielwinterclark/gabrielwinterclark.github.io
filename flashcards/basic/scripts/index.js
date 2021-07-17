@@ -7,26 +7,6 @@ class question {
 	}
 }
 
-//grab questions, answers, and next buttons from HTML and assign variable names to work with
-
-var questionOne = document.getElementById("questionOne");
-var questionTwo = document.getElementById("questionTwo");
-var questionThree = document.getElementById("questionThree");
-var answerOne = document.getElementById("answerOne");
-var answerTwo = document.getElementById("answerTwo");
-var answerThree = document.getElementById("answerThree");
-var nextOne = document.getElementById("nextOne");
-var nextTwo = document.getElementById("nextTwo");
-
-//hide everything but the first question until later so that user only sees one question at a time
-answerOne.style.visibility = 'hidden';
-questionTwo.style.visibility = 'hidden';
-answerTwo.style.visibility = 'hidden';
-questionThree.style.visibility = 'hidden';
-answerThree.style.visibility = 'hidden';
-nextOne.style.visibility = 'hidden';
-nextTwo.style.visibility = 'hidden';
-
 //delcare an array called quiz to store questions and answers
 let quiz = [];
 
