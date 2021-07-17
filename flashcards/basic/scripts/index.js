@@ -5,7 +5,7 @@ class question {
 		this.question = question;
 		this.answer = answer;
 	}
-}
+};
 
 //delcare an array called quiz to store questions and answers
 let quiz = [];
