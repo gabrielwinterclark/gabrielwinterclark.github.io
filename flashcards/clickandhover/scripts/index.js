@@ -5,27 +5,7 @@ class question {
 		this.question = question;
 		this.answer = answer;
 	}
-}
-
-//grab questions, answers, and next buttons from HTML and assign variable names to work with
-
-var questionOne = document.getElementById("questionOne");
-var questionTwo = document.getElementById("questionTwo");
-var questionThree = document.getElementById("questionThree");
-var answerOne = document.getElementById("answerOne");
-var answerTwo = document.getElementById("answerTwo");
-var answerThree = document.getElementById("answerThree");
-var nextOne = document.getElementById("nextOne");
-var nextTwo = document.getElementById("nextTwo");
-
-//hide everything but the first question until later so that user only sees one question at a time 
-answerOne.style.visibility = 'hidden';
-questionTwo.style.visibility = 'hidden';
-answerTwo.style.visibility = 'hidden';
-questionThree.style.visibility = 'hidden';
-answerThree.style.visibility = 'hidden';
-nextOne.style.visibility = 'hidden';
-nextTwo.style.visibility = 'hidden';
+};
 
 //delcare an array called quiz to store questions and answers
 let quiz = [];
@@ -35,63 +15,37 @@ quiz.push(new question("What is the capital of Mexico?","Mexico City"));
 quiz.push(new question("What is the capital of Russia?","Moscow"));
 quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 
-//loop through the array printing out the question and the answer in the console
-for (let i = 0; i < quiz.length; i++) {
-  console.log(quiz[i].question);
+//declare a variable called "questionNumber" and set it equal to 0 - so we can access this variable outside the if/else code below
+let questionNumber = 0;
+
+//add a handler so that when the user clicks, we start the function below
+document.querySelector('html').onclick = function() {
+	showQuestion(questionNumber);
 }
 
-//add a listener event for each question to display the answer when the question is clicked			       
-
-questionOne.addEventListener("click", myFunctionOne);
-
-function myFunctionOne() {
-  answerOne.style.visibility = 'visible';
-  nextOne.style.visibility = 'visible';	
-  console.log(quiz[0].answer);
+//create a function that displays questions one at a time
+function showQuestion(i) {
+  if (questionNumber < quiz.length) {
+  	console.log(quiz[i].question);
+	  //add another handler event so that when the user clicks, we are directed to a new function "showAnswer" that will show the answer - see below
+  	document.querySelector('html').onclick = function() {
+		showAnswer(i);
+  	}
+  }
+	//if the user does not click or if we've already gone through the questions, we return. since the questionNumber doesn't change unless the user clicks and we go to "showAnswer", nothing happens.
+  else {
+	return;
+  }
 }
 
-questionTwo.addEventListener("click", myFunctionTwo);
+//make a function that will show the answer of each question after the user clicks
+function showAnswer(i) {
+  console.log(quiz[i].answer);
 
-function myFunctionTwo() {
-  answerTwo.style.visibility = 'visible'
-  nextTwo.style.visibility = 'visible';
-  console.log(quiz[1].answer);
-}
-	
-questionThree.addEventListener("click", myFunctionThree);
-
-function myFunctionThree() {
-  answerThree.style.visibility = 'visible';
-  nextTwo.style.visibility = 'hidden';
-  console.log(quiz[2].answer)
-}
-
-//add listener event for next buttons so that user can proceed to the next question when they click next
-
-nextOne.addEventListener("click", myNextOneFunction);
-
-function myNextOneFunction( ) {
-	nextOne.style.visibility = 'hidden';
-	questionOne.style.visibility = 'hidden';
-	answerOne.style.visibility = 'hidden';
-	questionTwo.style.visibility = 'visible';
+//add one to questionNumber so that we can move through the questions
+  ++questionNumber;
+//add another handler so that when the user clicks, the next question is shown and we move back to the showQuestion function
+  document.querySelector('html').onclick = function() {
+	  showQuestion(questionNumber);
+  }
 }	
-
-nextTwo.addEventListener("click", myNextTwoFunction);
-
-function myNextTwoFunction( ) {
-	nextTwo.style.visibility = 'hidden';
-	questionTwo.style.visibility = 'hidden';
-	answerTwo.style.visibility = 'hidden';
-	questionThree.style.visibility = 'visible';
-}
-
-//add a listener event for each question to display an alert on hover explaining that the user needs to click to see the answer
-
-questionOne.addEventListener("mouseover", myHoverFunction);
-questionTwo.addEventListener("mouseover", myHoverFunction);
-questionThree.addEventListener("mouseover", myHoverFunction);
-
-function myHoverFunction() {
-  console.log("Please click the question to view the answer!");
-}
