@@ -18,16 +18,11 @@ quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 //declare a variable called "questionNumber" and set it equal to 0 - so we can access this variable outside the if/else code below
 let questionNumber = 0;
 
-document.querySelector('html').onclick = function() {
-	showQuestion(questionNumber);
-}
-
 //create a function that displays questions one at a time
 function showQuestion(i) {
   if (questionNumber < quiz.length) {
 	document.getElementById("question").innerHTML = quiz[i].question;
   	}
-  }
   else {
 	return;
   }
@@ -39,6 +34,10 @@ function showAnswer(i) {
 
 //add one to questionNumber so that we can move through the questions
   ++questionNumber;
+  document.querySelector('html').onclick = function() {next();}
+}
+
+function next() {
 //add another handler so that when the user clicks, the next question is shown and we move back to the showQuestion function
   document.querySelector('html').onclick = function() {
 	  showQuestion(questionNumber);
