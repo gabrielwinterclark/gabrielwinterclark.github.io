@@ -19,7 +19,7 @@ let i = 0;
 
 //loop through the array printing out the question in the console, and then waiting for the user to click before the answer is shown
 function showQuestion(i) {
-  while (i < quiz.length) {
+  if (i < quiz.length) {
   console.log(quiz[i].question);
   document.querySelector('html').onclick = function() {
 	  showAnswer(i);
