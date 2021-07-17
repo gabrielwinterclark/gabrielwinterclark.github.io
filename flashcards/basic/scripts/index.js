@@ -16,7 +16,17 @@ quiz.push(new question("What is the capital of Russia?","Moscow"));
 quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 
 //loop through the array printing out the question in the console, and then waiting for the user to click before the answer is shown
-for (let i = 0; i < quiz.length; i++) {
+function showQuestion(i) {
+  for (let i = 0; i < quiz.length; i++) {
   console.log(quiz[i].question);
-  console.log(quiz[i].answer);
+  document.querySelector('html').onclick = function() {
+	  revealAnswer(i);
   }
+}
+}
+
+function revealAnswer(i) {
+  console.log(quiz[i].answer);
+  ++i;
+  document.querySelector('html').onclick = function() {showQuestion(i);}
+}	
