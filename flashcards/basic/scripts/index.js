@@ -20,13 +20,15 @@ function showQuestion(i) {
   for (let i = 0; i < quiz.length; i++) {
   console.log(quiz[i].question);
   document.querySelector('html').onclick = function() {
-	  revealAnswer(i);
+	  showAnswer(i);
   }
 }
 }
 
-function revealAnswer(i) {
+function showAnswer(i) {
   console.log(quiz[i].answer);
   ++i;
   document.querySelector('html').onclick = function() {showQuestion(i);}
 }	
+
+document.querySelector('html').onclick = function() {showQuestion(i);}
