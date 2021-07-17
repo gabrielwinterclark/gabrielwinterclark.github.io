@@ -15,24 +15,28 @@ quiz.push(new question("What is the capital of Mexico?","Mexico City"));
 quiz.push(new question("What is the capital of Russia?","Moscow"));
 quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 
-let number = 0;
+let questionNumber = 1;
 
 function showQuestion(i) {
-  if (number < quiz.length) {
-  console.log(quiz[i].question);
-  document.querySelector('html').onclick = function() {
-	  showAnswer(i);
+  if (questionNumber <= quiz.length) {
+  	console.log(quiz[i].question);
+  	document.querySelector('html').onclick = function() {
+		showAnswer(i);
+  	}
   }
-}
-	else {
-		return;
-	}
+  else {
+	return;
+  }
 }
 
 function showAnswer(i) {
   console.log(quiz[i].answer);
-  ++number;
-  document.querySelector('html').onclick = function() {showQuestion(number);}
+  ++questionNumber;
+  document.querySelector('html').onclick = function() {
+	  showQuestion(questionNumber);
+  }
 }	
 
-document.querySelector('html').onclick = function() {showQuestion(number);}
+document.querySelector('html').onclick = function() {
+	showQuestion(questionNumber);
+}
