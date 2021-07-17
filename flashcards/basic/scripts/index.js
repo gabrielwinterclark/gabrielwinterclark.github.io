@@ -25,6 +25,9 @@ function showQuestion(i) {
 	  showAnswer(i);
   }
 }
+	else {
+		return;
+	}
 }
 
 function showAnswer(i) {
