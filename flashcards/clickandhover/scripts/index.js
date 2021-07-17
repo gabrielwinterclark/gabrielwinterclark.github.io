@@ -24,7 +24,6 @@ function showQuestion(i) {
 	document.getElementById("question").innerHTML = quiz[i].question;
   	}
   }
-	//if the user does not click or if we've already gone through the questions, we return. since the questionNumber doesn't change unless the user clicks and we go to "showAnswer", nothing happens.
   else {
 	return;
   }
