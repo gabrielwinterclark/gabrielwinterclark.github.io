@@ -32,7 +32,7 @@ function showQuestion(i) {
 function showAnswer(i) {
   console.log(quiz[i].answer);
   ++number;
-  document.querySelector('html').onclick = function() {showQuestion(count);}
+  document.querySelector('html').onclick = function() {showQuestion(number);}
 }	
 
-document.querySelector('html').onclick = function() {showQuestion(count);}
+document.querySelector('html').onclick = function() {showQuestion(number);}
