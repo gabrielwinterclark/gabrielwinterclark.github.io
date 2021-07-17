@@ -18,6 +18,10 @@ quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 //declare a variable called "questionNumber" and set it equal to 0 - so we can access this variable outside the if/else code below
 let questionNumber = 0;
 
+document.querySelector('html').onclick = function() {
+	showQuestion(questionNumber);
+}
+
 //create a function that displays questions one at a time
 function showQuestion(i) {
   if (questionNumber < quiz.length) {
