@@ -18,7 +18,7 @@ quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 let number = 0;
 
 function showQuestion(i) {
-  if (count < quiz.length) {
+  if (number < quiz.length) {
   console.log(quiz[i].question);
   document.querySelector('html').onclick = function() {
 	  showAnswer(i);
