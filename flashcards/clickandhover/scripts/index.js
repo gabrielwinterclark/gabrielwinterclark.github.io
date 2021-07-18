@@ -7,6 +7,9 @@ class question {
 	}
 };
 
+var q = document.getElementById("question");
+var a = document.getElementById("answer");
+
 //delcare an array called quiz to store questions and answers
 let quiz = [];
 
@@ -20,16 +23,16 @@ let questionNumber = 0;
 function showQuestion(i) {
   document.getElementById("answer").innerHTML = "";
   if (questionNumber < quiz.length) {
-	document.getElementById("question").innerHTML = quiz[i].question;
+	q = quiz[i].question;
   	}
   else {
-	document.getElementById("question").innerHTML = "";
+	q = "";
 	return;
   }
 }
 
 function showAnswer(i) {
-  document.getElementById("answer").innerHTML = quiz[i].answer;
+  a = quiz[i].answer;
   ++questionNumber;
   document.querySelector('html').onclick = function() {nextQuestion();
   }
@@ -38,7 +41,7 @@ function showAnswer(i) {
 function nextQuestion() {
   document.querySelector('html').onclick = function() {
 	  showQuestion(questionNumber);
-  document.getElementById("answer").innerHTML = "";
+  a = "";
   }
 }	
 
