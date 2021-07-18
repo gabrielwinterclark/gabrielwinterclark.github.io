@@ -12,10 +12,15 @@ class question {
 //delcare an array called quiz to store questions and answers
 let quiz = [];
 
-//create 3 new objects and push them onto the array
-quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", 'images/revolucion.png'));
-quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", 'images/cathedral.png'));
-quiz.push(new question("What is the capital of Bangladesh?","Dhaka","Can you identify this Dhaka landmark?", 'images/memorial.png'));
+//create variable names for any images that are going to be put into the array
+var mexicoImage = images/revolucion.png;
+var russiaImage = images/cathedral.png;
+var bangladeshImage = images/memorial.png;
+
+//create 3 new objects and push them onto the array, using the variables defined above to push any new images
+quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", mexicoImage));
+quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", russiaImage));
+quiz.push(new question("What is the capital of Bangladesh?","Dhaka","Can you identify this Dhaka landmark?", bangladeshImage));
 
 //start questionNumber at 0; we start with the first question in the array
 let questionNumber = 0;
