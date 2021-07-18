@@ -18,7 +18,7 @@ let quiz = [ {
 }, {
 	"question":"What is the capital of Russia?",
 	"answer": "Moscow",
-	"pictureinfo":"Can you identify this Moscow landmark?",
+	"pictureinfo":"Can you identify this TYPO landmark?",
 	"picture": "images/cathedral.png"
 } {
         "question":"What is the capital of Bangladesh?",
