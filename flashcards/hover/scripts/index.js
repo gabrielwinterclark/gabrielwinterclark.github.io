@@ -49,7 +49,7 @@ function showAnswer(i) {
   ++questionNumber;
 	
 //wait for the user to click, then call a function so that we can move on to the next question (see below)	
-  document.querySelector('html').onclick = function() {nextQuestion();
+  document.querySelector('html').mouseover = function() {nextQuestion();
   }
 }
 
