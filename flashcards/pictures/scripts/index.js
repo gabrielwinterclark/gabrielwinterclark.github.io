@@ -13,9 +13,9 @@ class question {
 let quiz = [];
 
 //create 3 new objects and push them onto the array
-quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", https://upload.wikimedia.org/wikipedia/commons/e/ea/Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg));
-quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", https://media-cdn.tripadvisor.com/media/photo-s/18/37/20/ab/photo0jpg.jpg));
-quiz.push(new question("What is the capital of Bangladesh?","Dhaka","Can you identify this Dhaka landmark?", http://www.alluringworld.com/wp-content/uploads/2018/05/1-Martyr-Bangladesh.jpg));
+quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg"));
+quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", src="https://media-cdn.tripadvisor.com/media/photo-s/18/37/20/ab/photo0jpg.jpg"));
+quiz.push(new question("What is the capital of Bangladesh?","Dhaka","Can you identify this Dhaka landmark?", src="http://www.alluringworld.com/wp-content/uploads/2018/05/1-Martyr-Bangladesh.jpg"));
 
 //start questionNumber at 0; we start with the first question in the array
 let questionNumber = 0;
