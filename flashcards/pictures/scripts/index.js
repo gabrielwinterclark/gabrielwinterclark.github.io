@@ -1,9 +1,11 @@
 //declare class question
 
 class question {
-	constructor (question,answer) {
+	constructor (question,answer,pictureinfo,picture) {
 		this.question = question;
 		this.answer = answer;
+		this.pictureinfo = pictureinfo;
+		this.picture = picture;
 	}
 };
 
@@ -11,9 +13,9 @@ class question {
 let quiz = [];
 
 //create 3 new objects and push them onto the array
-quiz.push(new question("What is the capital of Mexico?","Mexico City"));
-quiz.push(new question("What is the capital of Russia?","Moscow"));
-quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
+quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", images/revolucion.png));
+quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", images/cathedral.png));
+quiz.push(new question("What is the capital of Bangladesh?","Dhaka","Can you identify this Dhaka landmark?", images/memorial.png));
 
 //start questionNumber at 0; we start with the first question in the array
 let questionNumber = 0;
@@ -26,6 +28,8 @@ function showQuestion(i) {
 
 //remove the previous answer by changing the "answer" paragraph in the HTML, if there was one (if it's the first question, the answer should be blank anyway)
   document.getElementById("answer").innerHTML = "";
+  document.getElementById("pictureinfo").innerHTML = "";
+  document.getElementById("picture").innerHTML = "";
 	
 //if there are objects left, show the appropriate question by changing the "question" paragraph in the HTML
   if (questionNumber < quiz.length) {
@@ -44,6 +48,8 @@ function showAnswer(i) {
 	
 //show the appropriate answer by changing the "answer" paragraph in the HTML
   document.getElementById("answer").innerHTML = quiz[i].answer;
+  document.getElementById("pictureinfo").innerHTML = quiz[i].pictureinfo;
+  document.getElementById("picture").innerHTML = quiz[i].picture;
 	
 //add one to questionNumber so that we can move on to the next question
   ++questionNumber;
@@ -60,5 +66,7 @@ function nextQuestion() {
 	  
 //remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
   document.getElementById("answer").innerHTML = "";
+  document.getElementById("pictureinfo").innerHTML = "";
+  document.getElementById("picture").innerHTML = ""
   }
 }
