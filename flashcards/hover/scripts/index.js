@@ -55,7 +55,7 @@ function showAnswer(i) {
 
 //go back to the showQuestion function and start again for the next object
 function nextQuestion() {
-  document.querySelector('html').onclick = function() {
+  document.querySelector('html').mouseover = function() {
 	  showQuestion(questionNumber);
 	  
 //remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
