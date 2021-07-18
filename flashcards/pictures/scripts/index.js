@@ -26,7 +26,7 @@ document.querySelector('html').onclick = function() {showQuestion(questionNumber
 //create a function to move through the questions
 function showQuestion(i) {
 
-//remove the previous answer by changing the "answer" paragraph in the HTML, if there was one (if it's the first question, the answer should be blank anyway)
+//remove the previous answer, picture info, and picture by changing the appropriate paragraphs in the HTML, if there was one (if it's the first question, the answer/picture/picture info should be blank anyway)
   document.getElementById("answer").innerHTML = "";
   document.getElementById("pictureinfo").innerHTML = "";
   document.getElementById("picture").innerHTML = "";
@@ -46,7 +46,7 @@ function showQuestion(i) {
 //make a function to show each answer
 function showAnswer(i) {
 	
-//show the appropriate answer by changing the "answer" paragraph in the HTML
+//show the appropriate answer, picture, and picture info by changing the appropriate paragraphs in the HTML
   document.getElementById("answer").innerHTML = quiz[i].answer;
   document.getElementById("pictureinfo").innerHTML = quiz[i].pictureinfo;
   document.getElementById("picture").innerHTML = quiz[i].picture;
@@ -64,7 +64,7 @@ function nextQuestion() {
   document.querySelector('html').onclick = function() {
 	  showQuestion(questionNumber);
 	  
-//remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
+//remove the previous answer, picture, and picture info in the HTML to say nothing
   document.getElementById("answer").innerHTML = "";
   document.getElementById("pictureinfo").innerHTML = "";
   document.getElementById("picture").innerHTML = ""
