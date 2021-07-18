@@ -5,90 +5,60 @@ class question {
 		this.question = question;
 		this.answer = answer;
 	}
-}
-
-//grab questions, answers, and next buttons from HTML and assign variable names to work with
-
-var questionOne = document.getElementById("questionOne");
-var questionTwo = document.getElementById("questionTwo");
-var questionThree = document.getElementById("questionThree");
-var answerOne = document.getElementById("answerOne");
-var answerTwo = document.getElementById("answerTwo");
-var answerThree = document.getElementById("answerThree");
-var nextOne = document.getElementById("nextOne");
-var nextTwo = document.getElementById("nextTwo");
-
-//hide everything but the first question until later so that user only sees one question at a time
-
-answerOne.style.visibility = 'hidden';
-questionTwo.style.visibility = 'hidden';
-answerTwo.style.visibility = 'hidden';
-questionThree.style.visibility = 'hidden';
-answerThree.style.visibility = 'hidden';
-nextOne.style.visibility = 'hidden';
-nextTwo.style.visibility = 'hidden';
+};
 
 //delcare an array called quiz to store questions and answers
 let quiz = [];
 
-//create 3 new objects and push them onto the array 
+//create 3 new objects and push them onto the array
 quiz.push(new question("What is the capital of Mexico?","Mexico City"));
 quiz.push(new question("What is the capital of Russia?","Moscow"));
 quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 
-//loop through the array printing out the question and the answer in the console
-for (let i = 0; i < quiz.length; i++) {
-  console.log(quiz[i].question);
-}
+//start questionNumber at 0; we start with the first question in the array
+let questionNumber = 0;
 
-//print a message explaining that the user must hover to see answers
+//once the user clicks on the page, we show the first question
+document.querySelector('html').onclick = function() {showQuestion(questionNumber);}
 
-console.log("Please hover over the question to see the answer.")
+//create a function to move through the questions
+function showQuestion(i) {
 
-//add a listener event for each question to display the answer when the question is clicked, make next buttons visible, and explain again to the user that they must hover to see answers				       
-
-questionOne.addEventListener("mouseover", myFunctionOne);
-
-function myFunctionOne() {
-  answerOne.style.visibility = 'visible';
-  nextOne.style.visibility = 'visible';	
-  console.log(quiz[0].answer)
-}
-
-questionTwo.addEventListener("mouseover", myFunctionTwo);
-
-function myFunctionTwo() {
-  answerTwo.style.visibility = 'visible'
-  nextTwo.style.visibility = 'visible';
-  console.log(quiz[1].answer);
-}
+//remove the previous answer by changing the "answer" paragraph in the HTML, if there was one (if it's the first question, the answer should be blank anyway)
+  document.getElementById("answer").innerHTML = "";
 	
-questionThree.addEventListener("mouseover", myFunctionThree);
-
-function myFunctionThree() {
-  answerThree.style.visibility = 'visible';
-  nextTwo.style.visibility = 'hidden';
-  console.log(quiz[2].answer)
+//if there are objects left, show the appropriate question by changing the "question" paragraph in the HTML
+  if (questionNumber < quiz.length) {
+	document.getElementById("question").innerHTML = quiz[i].question;
+  	}
+	
+//if not, make the "question" paragraph in the HTML blank
+  else {
+	document.getElementById("question").innerHTML = "";
+	return;
+  }
 }
 
-//add listener event for next buttons so that they can proceed to the next question when they click next
+//make a function to show each answer
+function showAnswer(i) {
+	
+//show the appropriate answer by changing the "answer" paragraph in the HTML
+  document.getElementById("answer").innerHTML = quiz[i].answer;
+	
+//add one to questionNumber so that we can move on to the next question
+  ++questionNumber;
+	
+//wait for the user to click, then call a function so that we can move on to the next question (see below)	
+  document.querySelector('html').onclick = function() {nextQuestion();
+  }
+}
 
-nextOne.addEventListener("click", myNextOneFunction);
-
-function myNextOneFunction( ) {
-	nextOne.style.visibility = 'hidden';
-	questionOne.style.visibility = 'hidden';
-	answerOne.style.visibility = 'hidden';
-	questionTwo.style.visibility = 'visible';
-	console.log("Please hover over the question to see the answer.");
-}	
-
-nextTwo.addEventListener("click", myNextTwoFunction);
-
-function myNextTwoFunction( ) {
-	nextTwo.style.visibility = 'hidden';
-	questionTwo.style.visibility = 'hidden';
-	answerTwo.style.visibility = 'hidden';
-	questionThree.style.visibility = 'visible';
-	console.log("Please hover over the question to see the answer.");
+//go back to the showQuestion function and start again for the next object
+function nextQuestion() {
+  document.querySelector('html').onclick = function() {
+	  showQuestion(questionNumber);
+	  
+//remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
+  document.getElementById("answer").innerHTML = "";
+  }
 }
