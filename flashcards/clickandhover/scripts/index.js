@@ -63,4 +63,3 @@ function nextQuestion() {
 //remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
 	  document.getElementById("answer").innerHTML = "";
   }
-}
