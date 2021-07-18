@@ -49,13 +49,13 @@ function showAnswer(i) {
   ++questionNumber;
 	
 //wait for the user to click, then call a function so that we can move on to the next question (see below)	
-  document.querySelector('html').mouseover = function() {nextQuestion();
+  document.querySelector('html').onclick = function() {nextQuestion();
   }
 }
 
 //go back to the showQuestion function and start again for the next object
 function nextQuestion() {
-  document.querySelector('html').mouseover = function() {
+  document.querySelector('html').onclick = function() {
 	  showQuestion(questionNumber);
 	  
 //remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
