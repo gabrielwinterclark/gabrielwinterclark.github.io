@@ -20,7 +20,7 @@ let questionNumber = 0;
 
 //create a function that displays questions one at a time
 function showQuestion(i) {
-  document.getElementByID("answer").innerHTML = "";
+  document.getElementById("answer").innerHTML = "";
   if (questionNumber < quiz.length) {
 	document.getElementById("question").innerHTML = quiz[i].question;
   	}
