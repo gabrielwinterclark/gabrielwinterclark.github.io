@@ -1,14 +1,10 @@
 //declare class question
-
 class question {
 	constructor (question,answer) {
 		this.question = question;
 		this.answer = answer;
 	}
 };
-
-var q = document.getElementById("question");
-var a = document.getElementById("answer");
 
 //delcare an array called quiz to store questions and answers
 let quiz = [];
@@ -18,31 +14,43 @@ quiz.push(new question("What is the capital of Mexico?","Mexico City"));
 quiz.push(new question("What is the capital of Russia?","Moscow"));
 quiz.push(new question("What is the capital of Bangladesh?","Dhaka"));
 
+//start questionNumber at 0; we start with the first question in the array
 let questionNumber = 0;
 
+//once the user clicks on the page, we show the first question
+document.querySelector('html').onclick = function() {showQuestion(questionNumber);}
+
+//create a function to move through the questions
 function showQuestion(i) {
-  document.getElementById("answer").innerHTML = "";
+	
+//if there are objects left, show the appropriate question by changing the "question" paragraph in the HTML
   if (questionNumber < quiz.length) {
-	q = quiz[i].question;
+	document.getElementById("question").innerHTML = quiz[i].question;
   	}
+	
+//if not, make the "question" paragraph in the HTML blank
   else {
-	q = "";
+	document.getElementById("question").innerHTML = "";
 	return;
   }
 }
 
+//make a function to show each answer
 function showAnswer(i) {
-  a = quiz[i].answer;
+	
+//show the appropriate answer by changing the "answer" paragraph in the HTML
+  document.getElementById("answer").innerHTML = quiz[i].answer;
+	
+//add one to questionNumber so that we can move on to the next question
   ++questionNumber;
-  document.querySelector('html').onclick = function() {nextQuestion();
+	
+//wait for the user to click, then call a function so that we can move on to the next question
+  document.querySelector('html').onclick = function() {
+	  
+//show the next question
+	  showQuestion(questionNumber);
+	  
+//remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
+	  document.getElementById("answer").innerHTML = "";
   }
 }
-
-function nextQuestion() {
-  document.querySelector('html').onclick = function() {
-	  showQuestion(questionNumber);
-  a = "";
-  }
-}	
-
-document.querySelector('html').onclick = function() {showQuestion(questionNumber);}
