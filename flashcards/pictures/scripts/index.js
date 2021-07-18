@@ -9,24 +9,14 @@ class question {
 	}
 };
 
-//delcare an array called quiz to store questions, answers, and images
-let quiz = [ {
-	"question":"What is the capital of Mexico?",
-	"answer": "Mexico City",
-	"pictureinfo": "Can you identify this Mexico City landmark?",
-	"picture": images/revolucion.png
-}, {
-	"question":"What is the capital of Russia?",
-	"answer": "Moscow",
-	"pictureinfo":"Can you identify this TYPO landmark?",
-	"picture": images/cathedral.png
-}, {
-        "question":"What is the capital of Bangladesh?",
-        "answer": "Dhaka",
-	"pictureinfo": "Can you identify this Bangladesh landmark?",
-	"picture": images/memorial.png 
-}
-];
+//delcare an array called quiz to store questions and answers
+let quiz = [] ;
+
+//create 3 new objects and push them onto the array
+quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", images/revolucion.png));
+quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", images/cathedral.png));
+quiz.push(new question("What is the capital of Bangladesh?","Dhaka","Can you identify this Dhaka landmark?", images/memorial.png));
+
 
 //start questionNumber at 0; we start with the first question in the array
 let questionNumber = 0;
