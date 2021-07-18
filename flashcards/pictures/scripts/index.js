@@ -20,13 +20,13 @@ let quiz = [ {
 	"answer": "Moscow",
 	"pictureinfo":"Can you identify this TYPO landmark?",
 	"picture": "images/cathedral.png"
-} {
+}, {
         "question":"What is the capital of Bangladesh?",
         "answer": "Dhaka",
 	"pictureinfo": "Can you identify this Bangladesh landmark?",
 	"picture": "images/memorial.png" 
 }
-] ;
+];
 
 //start questionNumber at 0; we start with the first question in the array
 let questionNumber = 0;
