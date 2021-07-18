@@ -20,26 +20,31 @@ let questionNumber = 0;
 
 //create a function that displays questions one at a time
 function showQuestion(i) {
+  document.getElementByID("answer").innerHTML = "";
   if (questionNumber < quiz.length) {
 	document.getElementById("question").innerHTML = quiz[i].question;
   	}
   else {
+	document.getElementById("question").innerHTML = "";
 	return;
   }
 }
 
 //make a function that will show the answer of each question after the user clicks
 function showAnswer(i) {
-  document.getElementById("moveOn").style.visibility = hidden;
+  document.getElementById("answer").innerHTML = quiz[i].answer;
 
 //add one to questionNumber so that we can move through the questions
   ++questionNumber;
-  document.querySelector('html').onclick = function() {next();}
+  document.querySelector('html').onclick = function() {nextQuestion();
+  }
 }
 
-function next() {
+function nextQuestion() {
 //add another handler so that when the user clicks, the next question is shown and we move back to the showQuestion function
   document.querySelector('html').onclick = function() {
 	  showQuestion(questionNumber);
   }
 }	
+
+document.querySelector('html').onclick = function() {showQuestion(questionNumber);}
