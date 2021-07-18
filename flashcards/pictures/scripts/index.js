@@ -17,6 +17,11 @@ var mexicoImage = document.getElementById("mexicoImage");
 var russiaImage = document.getElementById("russiaImage");
 var bangladeshImage = document.getElementById("bangladeshImage");
 
+//hide the images for now
+mexicoImage.style.visibility='hidden';
+russiaImage.style.visibility='hidden';
+bangladeshImage.style.visibility='hidden';
+
 //create 3 new objects and push them onto the array, using the variables defined above to push any new images
 quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", mexicoImage));
 quiz.push(new question("What is the capital of Russia?","Moscow","Can you identify this Moscow landmark?", russiaImage));
