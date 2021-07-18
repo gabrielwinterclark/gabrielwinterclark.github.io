@@ -25,6 +25,11 @@ function showQuestion(i) {
 	
 //if there are objects left, show the appropriate question by changing the "question" paragraph in the HTML
   if (questionNumber < quiz.length) {
+
+//remove the previous answer by changing the "answer" paragraph in the HTML, if there was one (if it's the first question, the answer should be blank anyway)
+        document.getElementById("answer").innerHTML="";
+	  
+//and then show the question
 	document.getElementById("question").innerHTML = quiz[i].question;
   	}
 	
@@ -44,10 +49,15 @@ function showAnswer(i) {
 //add one to questionNumber so that we can move on to the next question
   ++questionNumber;
 	
-//wait for the user to click, then call a function so that we can move on to the next question
-  document.querySelector('html').onclick = function() {
+//wait for the user to click, then call a function so that we can move on to the next question (see below)
+  document.querySelector('html').onclick = function() {nextQuestion();
+  }
+}
 	  
-//show the next question
+//the function
+function nextQuestion() {
+	
+//go back to the showQuestion function and start again for the next object
 	  showQuestion(questionNumber);
 	  
 //remove the previous answer by setting the "answer" paragraph in the HTML to say nothing
