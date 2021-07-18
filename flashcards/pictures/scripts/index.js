@@ -14,17 +14,17 @@ let quiz = [ {
 	"question":"What is the capital of Mexico?",
 	"answer": "Mexico City",
 	"pictureinfo": "Can you identify this Mexico City landmark?",
-	"picture": "images/revolucion.png"
+	"picture": images/revolucion.png
 }, {
 	"question":"What is the capital of Russia?",
 	"answer": "Moscow",
 	"pictureinfo":"Can you identify this TYPO landmark?",
-	"picture": "images/cathedral.png"
+	"picture": images/cathedral.png
 }, {
         "question":"What is the capital of Bangladesh?",
         "answer": "Dhaka",
 	"pictureinfo": "Can you identify this Bangladesh landmark?",
-	"picture": "images/memorial.png" 
+	"picture": images/memorial.png 
 }
 ];
 
