@@ -13,9 +13,9 @@ class question {
 let quiz = [];
 
 //create variable names for any images that are going to be put into the array
-var mexicoImage = images/revolucion.png;
-var russiaImage = images/cathedral.png;
-var bangladeshImage = images/memorial.png;
+var mexicoImage = document.getElementById("mexicoImage");
+var russiaImage = document.getElementById("russiaImage");
+var bangladeshImage = document.getElementById("bangladeshImage");
 
 //create 3 new objects and push them onto the array, using the variables defined above to push any new images
 quiz.push(new question("What is the capital of Mexico?","Mexico City","Can you identify this Mexico City landmark?", mexicoImage));
